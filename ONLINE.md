@@ -2,6 +2,11 @@
 
 Il gioco funziona con una partita condivisa, fino a **60 giocatori**, guidata da un organizzatore. Chi partecipa apre un link nel browser e inserisce nickname e PIN. Può usare Wi-Fi o dati mobili, anche da reti e luoghi diversi. L'organizzatore avvia le domande, mostra le soluzioni e gestisce la classifica.
 
+- **Giocatori:** [gdg-tech-challenge.onrender.com/join](https://gdg-tech-challenge.onrender.com/join)
+- **Schermo e QR:** [gdg-tech-challenge.onrender.com/screen](https://gdg-tech-challenge.onrender.com/screen)
+- **Organizzatore:** [gdg-tech-challenge.onrender.com/host](https://gdg-tech-challenge.onrender.com/host)
+- **Codice privato:** copia `ADMIN_TOKEN` dalle [impostazioni Environment su Render](https://dashboard.render.com/web/srv-dbb1mg67bikc73bdgvsg/env), poi inseriscilo nella pagina dell'organizzatore. Non condividere quel valore con i giocatori.
+
 ## Pubblicazione da GitHub su Render
 
 1. Il codice è nel repository [danieled0010/gdggame](https://github.com/danieled0010/gdggame). GitHub Pages non può eseguire il server Node.js necessario a sincronizzare la partita.

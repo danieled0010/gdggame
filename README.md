@@ -6,6 +6,8 @@ A real multiplayer quiz for up to 60 participants (designed for 15–30). Deploy
 
 ## Play over the Internet
 
+**[Join the live game](https://gdg-tech-challenge.onrender.com/join)** · [Projector / QR](https://gdg-tech-challenge.onrender.com/screen) · [Private host dashboard](https://gdg-tech-challenge.onrender.com/host)
+
 The repository is [danieled0010/gdggame](https://github.com/danieled0010/gdggame). The Node.js server must run on a web hosting service; GitHub Pages only serves static sites and cannot run this multiplayer backend.
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/danieled0010/gdggame)
