@@ -1,5 +1,6 @@
 """Public-hosting integration test: 60 SSE players, safe URLs, auth and recovery."""
 import http.client
+import base64
 import json
 import os
 from pathlib import Path
@@ -16,7 +17,8 @@ with socket.socket() as sock:
     sock.bind(('127.0.0.1', 0))
     port = sock.getsockname()[1]
 base = f'http://127.0.0.1:{port}'
-key = 'integration-test-host-key-' + 'a' * 40
+# Match Render's generated 256-bit Base64 secrets, including +, / and padding.
+key = base64.b64encode(bytes([255, 254, 253]) * 10 + bytes([251, 250])).decode()
 streams = []
 process = None
 
@@ -150,7 +152,7 @@ with tempfile.TemporaryDirectory(prefix='gdg-online-') as storage:
         query = urllib.parse.urlencode({'role': 'player', 'id': players[0]['id'], 'token': players[0]['token']})
         reconnected = call('/api/state?' + query)
         assert reconnected[0] == 200 and reconnected[1]['me']['score'] >= 1000
-        assert call('/api/state?role=host&key=' + key)[0] == 200
+        assert call('/api/state?' + urllib.parse.urlencode({'role': 'host', 'key': key}))[0] == 200
         assert host('reset', confirm='RESET')[0] == 200
         assert call('/api/state?' + query)[0] == 401
         assert call('/events?' + query)[0] == 401

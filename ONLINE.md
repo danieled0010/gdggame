@@ -29,7 +29,7 @@ Il server funziona anche su altri servizi che supportano Node.js, HTTPS e connes
 | Variabile | Utilizzo |
 | --- | --- |
 | `NODE_ENV` | `production` sull'hosting. |
-| `ADMIN_TOKEN` | Codice segreto stabile, da 32 a 256 lettere, numeri, trattini o underscore. Obbligatorio in produzione. |
+| `ADMIN_TOKEN` | Codice segreto stabile, da 32 a 256 caratteri Base64 o URL-safe (lettere, numeri, `+`, `/`, `=`, `-`, `_`). Compatibile con il valore generato da Render. Obbligatorio in produzione. |
 | `PUBLIC_BASE_URL` | Origine pubblica, per esempio `https://quiz.example.com`. Senza percorsi, credenziali, query o frammenti. Su Render è facoltativa. |
 | `RENDER_EXTERNAL_URL` | Fornita automaticamente da Render; usata se `PUBLIC_BASE_URL` non è impostata. |
 | `PORT` | Porta fornita dall'hosting; in locale è `3000`. |

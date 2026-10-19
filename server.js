@@ -27,7 +27,7 @@ const ONLINE = Boolean(PUBLIC_BASE_URL);
 const PRODUCTION = ONLINE || process.env.NODE_ENV === 'production';
 if (PRODUCTION && !process.env.ADMIN_TOKEN) throw new Error('Set ADMIN_TOKEN before starting an online server');
 const ADMIN_TOKEN = process.env.ADMIN_TOKEN || crypto.randomBytes(18).toString('hex');
-if (!/^[A-Za-z0-9_-]{32,256}$/.test(ADMIN_TOKEN)) throw new Error('ADMIN_TOKEN must contain 32–256 letters, numbers, underscores or hyphens');
+if (!/^[A-Za-z0-9_+/=-]{32,256}$/.test(ADMIN_TOKEN)) throw new Error('ADMIN_TOKEN must contain 32–256 Base64 or URL-safe characters');
 fs.mkdirSync(DATA_DIR, {recursive:true, mode:0o700});
 const MAX_PLAYERS = 60;
 const FOCUS_MIN_AWAY_MS = 2500; // Ignore brief OS interruptions; this remains only a heuristic.
