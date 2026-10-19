@@ -1,0 +1,12 @@
+{
+  "name": "gdg-tech-challenge",
+  "version": "4.0.0",
+  "private": true,
+  "description": "GDG on Campus multiplayer quiz for online and local events",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check public/app.js && node --check nickname-filter.js",
+    "test": "python3 tests/run_tests.py"
+  }
+}

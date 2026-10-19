@@ -1,0 +1,19 @@
+# Render automatically provides RENDER_EXTERNAL_URL for the public join link.
+# Free instances have ephemeral storage: use a paid service + persistent disk
+# and set DATA_DIR to its mount path if the event needs restart recovery.
+services:
+  - type: web
+    name: gdg-tech-challenge
+    runtime: node
+    plan: free
+    region: frankfurt
+    numInstances: 1
+    buildCommand: npm run check
+    startCommand: npm start
+    healthCheckPath: /healthz
+    autoDeployTrigger: 'off'
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ADMIN_TOKEN
+        generateValue: true

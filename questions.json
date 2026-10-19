@@ -1,0 +1,193 @@
+{
+  "title": "GDG Tech Challenge",
+  "locale": "en",
+  "description": "Light-hearted, end-of-presentation offline LAN quiz for first-year MSc students at Sapienza.",
+  "questions": [
+    {
+      "id": "q01",
+      "category": "Git",
+      "difficulty": "warmup",
+      "time_sec": 15,
+      "question": "Which Git command saves your staged changes to the local repository?",
+      "options": [
+        "git push",
+        "git commit",
+        "git fetch",
+        "git clone"
+      ],
+      "correct_index": 1,
+      "explanation": "git commit creates a local commit from the changes already staged. git push sends commits to a remote repository."
+    },
+    {
+      "id": "q02",
+      "category": "GDG / Fun",
+      "difficulty": "warmup",
+      "time_sec": 15,
+      "question": "Which is the best Developer Group at Sapienza?",
+      "options": [
+        "GDG",
+        "404 Group Not Found",
+        "404 Group Not Found",
+        "404 Group Not Found"
+      ],
+      "correct_index": 0,
+      "explanation": "Do we really need to add anything else?"
+    },
+    {
+      "id": "q03",
+      "category": "Python",
+      "difficulty": "warmup",
+      "time_sec": 20,
+      "question": "What does this Python code print?",
+      "code": "numbers = [1, 2, 3]\nprint(len(numbers) * 2)",
+      "code_language": "python",
+      "options": [
+        "3",
+        "5",
+        "6",
+        "Error"
+      ],
+      "correct_index": 2,
+      "explanation": "The list has 3 elements; 3 multiplied by 2 is 6."
+    },
+    {
+      "id": "q04",
+      "category": "Networking",
+      "difficulty": "warmup",
+      "time_sec": 15,
+      "question": "What does DNS mainly do?",
+      "options": [
+        "Encrypt network traffic",
+        "Translate domain names into IP addresses",
+        "Store website passwords",
+        "Compress web pages"
+      ],
+      "correct_index": 1,
+      "explanation": "DNS helps resolve names such as example.com to IP addresses."
+    },
+{
+  "id": "q05",
+  "category": "GDG / Fun",
+  "difficulty": "warmup",
+  "time_sec": 15,
+  "question": "What is the minimum requirement to join our Developer Group?",
+  "options": [
+    "At least 5 years of coding experience",
+    "A PhD in Computer Science",
+    "Knowing how to center a div",
+    "Being curious (and maybe liking free pizza)"
+  ],
+  "correct_index": 3,
+  "explanation": "No experience required! Just bring your curiosity, your ideas, and maybe an appetite for pizza."
+},
+    {
+      "id": "q06",
+      "category": "Linux",
+      "difficulty": "intermediate",
+      "time_sec": 20,
+      "question": "Which command prints the full path of your current directory in a Linux terminal?",
+      "options": [
+        "ls",
+        "cd",
+        "pwd",
+        "mkdir"
+      ],
+      "correct_index": 2,
+      "explanation": "pwd stands for print working directory and displays the current directory path."
+    },
+    {
+      "id": "q07",
+      "category": "Web / HTTP",
+      "difficulty": "intermediate",
+      "time_sec": 20,
+      "question": "Which HTTP status code usually means that a requested page was not found?",
+      "options": [
+        "200 OK",
+        "301 Moved Permanently",
+        "403 Forbidden",
+        "404 Not Found"
+      ],
+      "correct_index": 3,
+      "explanation": "404 Not Found indicates the server could not find the requested resource."
+    },
+    {
+      "id": "q08",
+      "category": "Docker",
+      "difficulty": "intermediate",
+      "time_sec": 20,
+      "question": "What is a main advantage of using Docker containers?",
+      "options": [
+        "They make every app faster",
+        "They package an app with its dependencies",
+        "They eliminate all software bugs",
+        "They completely replace the host operating system"
+      ],
+      "correct_index": 1,
+      "explanation": "Containers package applications and their dependencies in a portable environment, helping consistency between systems."
+    },
+    {
+      "id": "q09",
+      "category": "AI / Machine Learning",
+      "difficulty": "intermediate",
+      "time_sec": 20,
+      "question": "What does overfitting mean in machine learning?",
+      "options": [
+        "The model uses too much RAM",
+        "The model learns the training data too closely and struggles with new data",
+        "The model has too few parameters",
+        "The model has not been trained yet"
+      ],
+      "correct_index": 1,
+      "explanation": "Overfitting happens when a model fits its training data too closely and generalizes poorly to unseen examples."
+    },
+    {
+      "id": "q10",
+      "category": "Python",
+      "difficulty": "challenge",
+      "time_sec": 25,
+      "question": "What does this Python code print?",
+      "code": "x = [1, 2, 3]\ny = x[1:]\ny.append(4)\nprint(len(x), len(y))",
+      "code_language": "python",
+      "options": [
+        "3 3",
+        "4 4",
+        "3 4",
+        "4 3"
+      ],
+      "correct_index": 0,
+      "explanation": "Slicing creates a new list [2, 3]; appending 4 makes y length 3, while x stays length 3."
+    },
+    {
+      "id": "q11",
+      "category": "Cybersecurity",
+      "difficulty": "challenge",
+      "time_sec": 25,
+      "question": "Why should a website store password hashes instead of passwords in plain text?",
+      "options": [
+        "To let administrators recover passwords easily",
+        "To avoid storing passwords in directly readable form",
+        "To speed up the user’s Internet connection",
+        "To hide the website’s IP address"
+      ],
+      "correct_index": 1,
+      "explanation": "A properly salted, slow password-hashing algorithm lets the site verify passwords without storing the original passwords in plaintext; it does not make weak passwords automatically safe."
+    },
+    {
+      "id": "q12",
+      "category": "JavaScript",
+      "difficulty": "final",
+      "time_sec": 30,
+      "question": "What does this JavaScript code print?",
+      "code": "let x = 5;\nlet y = x;\ny += 3;\nconsole.log(x, y);",
+      "code_language": "javascript",
+      "options": [
+        "8 8",
+        "5 8",
+        "5 5",
+        "undefined 8"
+      ],
+      "correct_index": 1,
+      "explanation": "Numbers are primitive values: y receives the value 5, then changes to 8 without changing x."
+    }
+  ]
+}
